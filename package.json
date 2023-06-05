@@ -1,11 +1,10 @@
 {
-  "name": "swaglabs automation",
+  "name": "swaglabs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test:e2e": "cucumber-js --require cucumber.conf.js --require tests/acceptance/stepDefinitions/**/*.js --format @cucumber/pretty-formatter"
-
   },
   "author": "Siam Hasan",
   "license": "ISC",
