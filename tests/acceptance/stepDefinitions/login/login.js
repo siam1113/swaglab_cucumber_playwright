@@ -2,16 +2,19 @@ const { Given, When, Then } = require("@cucumber/cucumber");
 const { expect } = require("@playwright/test");
 
 Given("I am on the login page for valid login", async function () {
+  let page = global.page;
   await page.goto("https://www.saucedemo.com/");
 });
 
 When("I enter username and password", async function () {
+  let page = global.page;
   await page.fill("#user-name", "standard_user");
   await page.fill("#password", "secret_sauce");
   await page.click("#login-button");
 });
 
 Then("I should be on the home page", async function () {
+  let page = global.page;
   await page.waitForSelector("#inventory_container");
 });
 
